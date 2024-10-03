@@ -1,0 +1,160 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 2vh;
+  max-width: 520px;
+
+  height: 10vh;
+  padding: var(--pd-x);
+  left: 50%;
+  transform: translateX(-50%);
+
+  position: fixed;
+  width: 100dvw;
+
+  z-index: 100;
+
+  transition: 0.4s all ease-in-out;
+}
+
+.navbar.scrolled {
+  background: white;
+  width: calc(100dvw - var(--pd-x) * 2);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 100px;
+}
+
+.navbar .logo h2 {
+  font-family: var(--ff-secondary);
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.navbar .menu-btn {
+  width: 40px;
+  height: 50px;
+
+  position: relative;
+  transition: 0.4s all ease-in-out;
+}
+
+.navbar .menu-btn .span {
+  width: 100%;
+  height: 2px;
+  background: black;
+  border-radius: 100px;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  transition: 0.4s all ease-in-out;
+}
+
+.navbar .menu-btn .span1 {
+  top: 30%;
+}
+
+.navbar .menu-btn .span2 {
+  top: 50%;
+  width: 50%;
+}
+
+.navbar .menu-btn .span3 {
+  top: 70%;
+  width: 25%;
+}
+
+.navbar .links {
+  position: fixed;
+
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+
+  height: 30vh;
+  width: calc(100dvw - var(--pd-x) * 2);
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 10vh;
+
+  opacity: 0;
+
+  background: white;
+
+  border-radius: 40px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  font-size: 1.4rem;
+
+  transition: 0.4s all ease-in-out;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 520px;
+}
+
+.navbar .links li a {
+  position: relative;
+  width: fit-content;
+  text-align: left;
+
+  cursor: pointer;
+
+  text-shadow: 0px 0px 20px rgb(255, 255, 255);
+
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+.navbar .links li .fa-solid {
+  float: left;
+}
+
+body.menu-toggle .navbar {
+}
+
+body.menu-toggle .navbar .links {
+  top: 14vh;
+  scale: 1;
+  opacity: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+body.menu-toggle .navbar .menu-btn .span1 {
+  right: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+body.menu-toggle .navbar .menu-btn .span2 {
+  width: 0%;
+}
+
+body.menu-toggle .navbar .menu-btn .span3 {
+  width: 100% !important;
+  right: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+body.menu-toggle .navbar .menu-btn {
+  transform: rotate(180deg) !important;
+}

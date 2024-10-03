@@ -1,0 +1,37 @@
+.feedbacks {
+  height: 100dvh;
+  padding-block: 10vh;
+}
+
+.feedbacks .slider {
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  background: var(--clr-gray);
+
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 3px 20px 0px;
+}
+
+.feedbacks .slider h3 {
+  font-weight: 500;
+}
+
+.feedback-slide {
+  padding: 2rem;
+  padding-bottom: 3rem;
+
+  border-radius: 1rem;
+}
+
+.feedback-name {
+  margin-top: 1rem;
+}
+
+.feedback-img {
+  border-radius: 500px 500px 0 0;
+  width: 50%;
+  pointer-events: none;
+}
+
+.feedbacks .slick-dots {
+  bottom: 30px !important;
+}

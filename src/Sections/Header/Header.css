@@ -1,0 +1,89 @@
+.header {
+  height: 100dvh;
+
+  background: url("https://res.cloudinary.com/dsqwnuyiw/image/upload/v1727805322/cristina/homebg_cnm2l4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  width: 60px;
+  height: 60px;
+
+  background: var(--clr-gray);
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  z-index: 101;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header .content {
+  padding-top: 15vh;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .slider {
+  max-width: 300px;
+}
+
+.header .text-1 {
+  margin-bottom: 1rem;
+}
+
+.header .p-2 {
+  margin-bottom: 1rem;
+}
+
+.header .btn {
+  margin-bottom: 2rem;
+}
+
+/* .header .slider .slick-list {
+  width: 100vw;
+} */
+
+.header .slider .img-wrapper img {
+  max-width: 300px;
+  width: 50vw;
+  margin: 0 auto;
+
+  border-radius: 500px 500px 50px 50px;
+}
+
+.slick-dots li {
+}
+
+.slick-dots li button:before {
+  content: "_";
+  scale: 5;
+  font-weight: 800;
+}
+
+/* .slick-slider {
+  button.slick-next:before {
+    content: url("https://w7.pngwing.com/pngs/247/15/png-transparent-arrow-arrow-angle-triangle-black-thumbnail.png");
+    display: block;
+    font-size: 1rem;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  button.slick-prev:before {
+    content: url("https://w7.pngwing.com/pngs/247/15/png-transparent-arrow-arrow-angle-triangle-black-thumbnail.png");
+    width: 30px !important;
+    height: 30px !important;
+  }
+} */
