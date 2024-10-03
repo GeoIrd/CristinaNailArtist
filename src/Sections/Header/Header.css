@@ -6,6 +6,10 @@
   background-position: center;
 }
 
+.header .btn {
+  font-weight: 500;
+}
+
 .whatsapp {
   position: fixed;
   bottom: 2rem;
