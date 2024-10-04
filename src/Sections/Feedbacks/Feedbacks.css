@@ -1,6 +1,7 @@
 .feedbacks {
   height: 100dvh;
   padding-block: 10vh;
+  padding-top: 20vh;
 }
 
 .feedbacks .slider {

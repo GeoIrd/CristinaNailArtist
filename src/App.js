@@ -7,17 +7,37 @@ import Prices from "./Sections/Prices/Prices";
 import Feedbacks from "./Sections/Feedbacks/Feedbacks";
 import Contact from "./Sections/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import AboutMe from "./Sections/AboutMe/AboutMe";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Cleanup function to avoid memory leaks
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Header></Header>
-      <MyWork></MyWork>
-      <Prices></Prices>
-      <Feedbacks></Feedbacks>
-      <Contact></Contact>
-      <Footer></Footer>
+      <Navbar />
+      <Header />
+      <Prices />
+      <MyWork />
+      <AboutMe />
+      <Feedbacks />
+      <Contact />
+      <Footer />
     </div>
   );
 }

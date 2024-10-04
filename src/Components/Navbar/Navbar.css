@@ -72,11 +72,14 @@
 .navbar .links {
   position: fixed;
 
+  pointer-events: none;
+
   font-family: var(--ff-secondary);
   text-transform: uppercase;
 
-  height: 30vh;
   width: calc(100dvw - var(--pd-x) * 2);
+
+  padding-block: 2rem;
 
   left: 50%;
   transform: translateX(-50%);
@@ -89,8 +92,10 @@
 
   border-radius: 40px;
 
+  padding-inline: 3rem;
+
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   justify-content: center;
   list-style: none;
@@ -133,6 +138,8 @@ body.menu-toggle .navbar .links {
   top: 14vh;
   scale: 1;
   opacity: 1;
+  pointer-events: all;
+
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 

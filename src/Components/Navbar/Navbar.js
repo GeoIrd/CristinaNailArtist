@@ -76,6 +76,18 @@ const Navbar = () => {
         <li>
           <Link
             onClick={toggleMenu}
+            to="about" // ID-ul secțiunii "Preturi"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-200}
+          >
+            <i className="fa-solid fa-circle-question"></i> Despre mine
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={toggleMenu}
             to="prices" // ID-ul secțiunii "Preturi"
             smooth={true}
             duration={500}

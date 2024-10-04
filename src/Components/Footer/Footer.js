@@ -28,6 +28,17 @@ const Footer = () => {
         <ul className="links">
           <li>
             <Link
+              to="home" // ID-ul secțiunii "Lucrari"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              <i className="fa-solid fa-home"></i> Home
+            </Link>
+          </li>
+          <li>
+            <Link
               to="my-work" // ID-ul secțiunii "Lucrari"
               smooth={true}
               duration={500}
@@ -35,6 +46,17 @@ const Footer = () => {
               offset={-50}
             >
               <i className="fa-solid fa-star"></i> Lucrări
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="prices" // ID-ul secțiunii "Preturi"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              <i className="fa-solid fa-circle-question"></i> Despre mine
             </Link>
           </li>
           <li>

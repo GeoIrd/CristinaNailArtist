@@ -1,0 +1,58 @@
+/* .about-me {
+  height: 300vh;
+} */
+
+.about-me .content {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.about {
+  height: 60vh;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding-inline: var(--pd-x);
+  text-align: center;
+
+  color: white;
+
+  position: sticky;
+  top: 20vh;
+
+  border-radius: 3rem;
+}
+
+.about1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://res.cloudinary.com/dsqwnuyiw/image/upload/v1728036507/cristina/WhatsApp_Image_2024-10-04_at_13.07.20_1_hqq3ka.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://res.cloudinary.com/dsqwnuyiw/image/upload/v1728036506/cristina/WhatsApp_Image_2024-10-04_at_13.07.20_2_jtfmqy.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://res.cloudinary.com/dsqwnuyiw/image/upload/v1728036506/cristina/WhatsApp_Image_2024-10-04_at_13.07.20_c26rkg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about .p-1 {
+  font-size: 1.2rem;
+}

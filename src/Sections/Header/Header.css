@@ -54,6 +54,7 @@
 
 .header .btn {
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 /* .header .slider .slick-list {

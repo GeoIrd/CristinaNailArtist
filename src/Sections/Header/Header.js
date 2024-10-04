@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Header.css";
 import Btn from "../../Components/Btn/Btn";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const settings = {
@@ -97,9 +98,11 @@ const Header = () => {
           în manichiură.
         </motion.p>
 
-        <motion.div variants={textVariants}>
-          <Btn variant={"dark"}>Descoperă lucrările mele!</Btn>
-        </motion.div>
+        <Link to="prices" smooth={true} duration={500} spy={true} offset={-50}>
+          <motion.div variants={textVariants}>
+            <Btn variant={"dark"}>Lista de prețuri </Btn>
+          </motion.div>
+        </Link>
 
         {/* Slider animation */}
         <motion.div variants={sliderVariants} className="slider-wrapper">
