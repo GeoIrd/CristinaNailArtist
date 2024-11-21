@@ -9,8 +9,8 @@ const AboutMe = () => {
         <div className="about about1">
           <h2 className="text-2">Mă numesc Cristina.</h2>
           <p className="p-1">
-            Pasiunea mea pentru manichiură a început acum peste 2 ani,
-            dezvăluind o lume fascinantă de culori și detalii fine. <br />
+            Pasiunea mea pentru manichiură a început acum 2 ani, dezvăluind o
+            lume fascinantă de culori și detalii fine. <br />
             <br />
             Fiecare unghie devine o operă de artă personalizată, aducând
             frumusețe și încredere femeilor.

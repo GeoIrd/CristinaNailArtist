@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,8 +6,41 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Header.css";
 import Btn from "../../Components/Btn/Btn";
 import { Link } from "react-scroll";
+import CalendarPicker from "../../Components/Calendar/Calendar";
+
+// Variants for Calendar animation
+const calendarVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+};
 
 const Header = () => {
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const calendarRef = useRef(null);
+
+  // Function to close calendar when clicking outside
+  const handleClickOutside = (event) => {
+    if (calendarRef.current && !calendarRef.current.contains(event.target)) {
+      setIsCalendarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isCalendarOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isCalendarOpen]);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -15,7 +48,6 @@ const Header = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-
     fade: true,
   };
 
@@ -73,6 +105,7 @@ const Header = () => {
 
   return (
     <header className="header" id="home">
+      {/* WhatsApp button */}
       <a href="https://wa.me/40799355048">
         <div className="whatsapp">
           <i class="fa-brands fa-whatsapp"></i>
@@ -88,7 +121,6 @@ const Header = () => {
         {/* Text animation with individual letters */}
         <motion.h1 className="text-1">
           {animateText("Frumusețea începe")}
-
           <br />
           {animateText("cu unghiile tale")}
         </motion.h1>
@@ -98,11 +130,46 @@ const Header = () => {
           în manichiură.
         </motion.p>
 
-        <Link to="prices" smooth={true} duration={500} spy={true} offset={-50}>
-          <motion.div variants={textVariants}>
-            <Btn variant={"dark"}>Lista de prețuri </Btn>
+        <motion.div variants={textVariants}>
+          <div className="btns">
+            {/* Button to toggle Calendar */}
+            {/* <div onClick={() => setIsCalendarOpen(!isCalendarOpen)}>
+              <Btn variant={"dark"}>Doresc o programare</Btn>
+            </div> */}
+
+            <a
+              href={`https://wa.me/40799355048?text=${encodeURIComponent(
+                `Bună, aș dori o programare.\n\nServiciul dorit: ...\nData: ...\nOra aproximativ: ...`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Btn variant={"dark"}>Doresc o programare</Btn>
+            </a>
+            <Link
+              to="prices"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              <Btn variant={"light"}>Lista de Prețuri</Btn>
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Animated Calendar */}
+        {isCalendarOpen && (
+          <motion.div
+            ref={calendarRef}
+            variants={calendarVariants}
+            initial="hidden"
+            animate="visible"
+            className="calendar-popup"
+          >
+            <CalendarPicker />
           </motion.div>
-        </Link>
+        )}
 
         {/* Slider animation */}
         <motion.div variants={sliderVariants} className="slider-wrapper">

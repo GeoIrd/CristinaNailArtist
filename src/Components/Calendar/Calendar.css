@@ -1,0 +1,208 @@
+.calendar-container {
+  width: 90vw;
+  max-width: 520px;
+  background: white !important;
+  background-color: var(--clr-gray); /* Folosește culoarea specificată */
+  border-radius: 10px; /* Rounding edges */
+  padding: 20px; /* Padding around the calendar */
+  position: fixed; /* Center the calendar on the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centering adjustment */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  z-index: 1000; /* Ensure it appears above other elements */
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 400px 200px rgba(0, 0, 0, 0.686);
+}
+
+.rbc-calendar {
+  border: none; /* Remove default border */
+  width: 90% !important;
+  height: 90% !important;
+}
+
+.rbc-event {
+  background: rgba(254, 166, 254, 0.1) !important; /* Custom event background */
+  color: black; /* Event text color */
+  border-radius: 5px; /* Rounding for event boxes */
+  padding: 5px; /* Padding inside event boxes */
+}
+
+.rbc-header {
+  background-color: var(--clr-dark); /* Custom header background */
+  color: var(--clr-light); /* Header text color */
+  padding: 10px; /* Padding in header */
+}
+
+.rbc-agenda-event {
+  background-color: var(--clr-gray); /* Agenda event background */
+  color: var(--clr-dark); /* Agenda text color */
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+div.calendar-container > div > div.rbc-toolbar > span:nth-child(1) > button {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.rbc-toolbar-label {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+div.calendar-container > div > div.rbc-toolbar > span:nth-child(3) > button {
+  font-size: 1rem;
+}
+
+div.calendar-container > div > div.rbc-toolbar span:nth-child(3) {
+  border-radius: 2rem !important;
+  background: rgba(254, 166, 254, 0.213) !important;
+  border: 0;
+  outline: 0;
+}
+
+div.calendar-container > div > div.rbc-toolbar span:nth-child(3) {
+  border-radius: 10rem !important;
+  border: 0;
+  outline: 0;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(3)
+  > button.rbc-active {
+  background: rgba(254, 166, 254, 0.1);
+  outline: 0;
+
+  border-radius: 2rem !important;
+  border: 0;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(3)
+  > button:nth-child(3) {
+  border: 0;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(3)
+  > button:nth-child(2) {
+  border: 0;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(3)
+  > button:nth-child(1) {
+  border: 0;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(1)
+  > button:nth-child(1) {
+  background: rgba(254, 166, 254, 0.1);
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(1)
+  > button:nth-child(2) {
+  background: rgb(255, 255, 255);
+  border-radius: 0rem;
+}
+
+div.calendar-container
+  > div
+  > div.rbc-toolbar
+  > span:nth-child(1)
+  > button:nth-child(3) {
+  background: rgb(255, 255, 255);
+  border-radius: 0 2rem 2rem 0rem;
+}
+
+.toggle-view-btn {
+  padding: 1rem;
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.rbc-btn-group {
+  margin-bottom: 1rem;
+}
+
+.rbc-header {
+  background: rgba(254, 166, 254, 0.1);
+  color: transparent; /* Ascunde tot textul */
+  position: relative; /* Pregătește elementul pentru manipularea pseudo-elementului */
+  font-weight: 400;
+}
+
+.rbc-header::first-letter {
+  color: black; /* Setează culoarea vizibilă pentru prima literă */
+  font-size: 18px; /* Poți ajusta dimensiunea dacă este nevoie */
+  position: absolute;
+  left: 10px; /* Poziționează prima literă mai precis */
+}
+
+/* Setează ziua curentă (today) cu fundal și border roz */
+.rbc-day-slot .rbc-today {
+  background: rgba(254, 166, 254, 0.1) !important; /* Roz deschis */
+  border: 2px solid rgba(0, 0, 0, 0) !important;
+}
+
+/* Suprascrie toate nuanțele de albastru pentru today și now */
+.rbc-day-slot .rbc-time-column.rbc-now.rbc-today .rbc-timeslot-group {
+  background: rgba(
+    254,
+    166,
+    254,
+    0.1
+  ) !important; /* Roz pentru grupul de ore */
+}
+
+/* Pentru rbc-now care poate avea albastru */
+.rbc-time-column.rbc-now {
+  background: rgba(254, 166, 254, 0.1) !important;
+  border-left: 2px solid rgba(254, 166, 254, 0) !important; /* Bordura roz pe marginea zilei curente */
+}
+
+/* Alte ajustări pentru a preveni nuanțele de albastru */
+.rbc-day-bg.rbc-today {
+  background-color: rgba(254, 166, 254, 0.1) !important;
+}
+
+.rbc-calendar {
+  width: 90% !important;
+  height: 100% !important; /* Setează înălțimea să fie 100% din container */
+  min-height: 70vh; /* Înălțime minimă, asigură uniformitate */
+  border: none; /* Remove default border */
+}
+
+.rbc-month-view {
+  height: 40vh; /* Înălțime minimă pentru vizualizarea lunară */
+}
+
+.rbc-time-view {
+  height: 40vh; /* Înălțime minimă pentru vizualizarea zilnică */
+}
+
+.rbc-agenda-view {
+  height: 40vh; /* Înălțime minimă pentru vizualizarea de agendă */
+}

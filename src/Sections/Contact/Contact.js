@@ -11,10 +11,17 @@ const Contact = () => {
 
         <div className="btns">
           <Btn variant={"light"}>
-            <a href="https://wa.me/40799355048">
+            <a
+              href={`https://wa.me/40799355048?text=${encodeURIComponent(
+                `Bună, aș dori o programare.\n\nServiciul dorit: ...\nData: ...\nOra aproximativ: ...`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fa-brands fa-whatsapp"></i> Număr de WhatsApp
             </a>
           </Btn>
+
           <Btn variant={"light"}>
             <a href="tel:+40799355048">
               <i class="fa-solid fa-phone"></i> Număr de telefon
